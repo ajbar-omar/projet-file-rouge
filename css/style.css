@@ -1,0 +1,49 @@
+/*start home */
+@media only screen and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+}
+.home {
+  background-color: #1c4587e0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/*End home */
+
+.home .navbar .logo {
+  width: 200px;
+  margin-left: -66px;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .home .navbar .logo {
+    width: 200px;
+    margin-left: 66px;
+  }
+}
+
+.home .accueil .slogan h1 {
+  font-family: "Bebas Neue", cursive;
+  color: #eaac78;
+  font-size: 74px;
+}
+.home .accueil .slogan button {
+  font-family: "Bebas Neue", cursive;
+  background-color: #eaac78;
+  color: white;
+  width: 130px;
+  padding: 11px;
+  letter-spacing: 4px;
+  margin-top: 50px;
+}
+
+.home .accueil .girl img {
+  height: 603px;
+  position: relative;
+  bottom: 178px;
+  left: 216px;
+
+}
