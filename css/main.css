@@ -7621,11 +7621,11 @@ body:not(.device-touch) .portfolio {
 
 .entry-title h2 a,
 .entry-title h3 a,
-.entry-title h4 a { color: #333; }
+.entry-title h4 a { color: #1c4587e0; }
 
 .entry-title h2 a:hover,
 .entry-title h3 a:hover,
-.entry-title h4 a:hover { color: #1ABC9C; }
+.entry-title h4 a:hover { color: #374553  ; }
 
 .entry-meta {
 	position: relative;
@@ -7694,7 +7694,7 @@ body:not(.device-touch) .portfolio {
 	margin-right: 5px;
 }
 
-.entry-meta a:not(:hover) { color: #999; }
+.entry-meta a:not(:hover) { color: #1c4587e0; }
 
 .entry-meta ins {
 	font-weight: 700;
