@@ -1,5 +1,5 @@
 <?php
-require_once '../manager/productsManager.php';
+require_once(__DIR__.'/../manager/productsManager.php');
 
 
 $deleteProductsManager = null;
