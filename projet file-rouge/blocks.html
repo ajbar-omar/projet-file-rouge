@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>paasportly</title>
+
+<style>
+	@media (min-width: 768px) {
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			overflow-y: auto;
+		}
+
+		.blocks-panel {
+			position: -webkit-sticky;
+			position: sticky;
+			height: 100%;
+			top: 0;
+			max-height: 100vh;
+			overflow-y: hidden;
+		}
+	}
+	.blocks-grid .grid-inner {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.blocks-grid .active-filter > .grid-inner {
+		background-color: rgba(255, 255, 255, 0.08);
+		border-bottom-color: transparent;
+	}
+
+	.blocks-grid .sub-grid-inner {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		background-color: rgba(255, 255, 255, 0.02);
+		border-bottom: 1px solid rgba(255,255,255,0.06);
+	}
+
+	.blocks-grid .sub-grid-inner h3 {
+		font-size: 0.925rem;
+		opacity: .8;
+	}
+
+	.bg-dark {
+		background-color: #1c4587 !important;
+	}
+
+	
+
+	.grid-inner-count {
+		--size: 30px;
+		font-family: poppins;
+		font-weight: 400;
+		background-color: rgba(255, 255, 255, 0.1);
+		color: #DDD;
+		width: var(--size);
+		height: var(--size);
+		line-height: calc(var(--size) + 2px) !important;
+		text-align: center;
+		border-radius: 50%;
+		font-size: 80%;
+	}
+
+	.blocks-grid .grid-inner-count,
+	.blocks-grid .sub-grid-inner .grid-inner-count {
+		position: relative;
+		--size: 24px;
+	}
+
+	.dark .search-form .input-group-text,
+	.dark .search-form .form-control:not(.not-dark) {
+		background-color: rgba(0,0,0,0.25);
+		border-color: rgba(255,255,255,0.15) !important;
+		border-radius: 23px 0 0 23px;
+	}
+
+	.dark .search-form .form-control:not(.not-dark) {
+		color: #FFF;
+		border-radius: 0 23px 23px 0;
+	}
+
+	.portfolio-item { padding-top: 5px; }
+
+	.portfolio-item .badge {
+		position: absolute;
+		z-index: 6;
+		top: 0;
+		right: 15px;
+		border-radius: 2px;
+		font-weight: 600;
+	}
+
+	.blocks-grid .updated .grid-inner-count::after {
+		content: "";
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		background: var(--danger);
+		right: 0px;
+		top: 0px;
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px #26262c;
+	}
+</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0 overflow-visible">
+
+				<div class="row no-gutters">
+					<div class="blocks-panel bg-dark dark shadow col-lg-3 col-md-4">
+						<div class="blocks-panel-inner">
+
+							<h1 class="font-weight-semibold text-center px-4 mt-5 mb-3">lorem<span class="nocolor font-weight-light">  </span></h1>
+
+							<p class="text-center font-weight-light mb-5 px-4 op-07">lorem</p>
+
+							<nav class="navbar navbar-expand-md p-0 m-0 w-100">
+								<button class="navbar-toggler btn btn-block py-3 d-flex text-white d-md-none align-items-center justify-content-center rounded-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #333">
+									<i class="icon-line-menu icon-fw mr-2"></i> Show Blocks Filter
+								</button>
+
+								<ul class="blocks-grid custom-filter row list-unstyled no-gutters collapse navbar-collapse mb-0" id="navbarNav" data-container="#blocks" data-active-class="active-filter">
+									<li class="col-12">
+										<form class="search-form input-group input-group-lg my-5 mt-md-0 px-4">
+											<div class="input-group-prepend mr-0">
+												<span class="input-group-text border-right-0"><i class="icon-line-search"></i></span>
+											</div>
+											<input class="form-control border-left-0 pl-0 block-search" type="text" placeholder="Search.." aria-label="Search">
+										</form>
+									</li>
+									
+									<li class="col-12">
+										<a href="#middle" class="grid-inner d-flex align-items-center py-3 px-4" data-filter=".cb-hero">
+											<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256" class="m-0 mr-3"><rect width="256" height="256" fill="none"></rect><rect x="32.00781" y="80.00005" width="160" height="128" rx="8" stroke-width="12" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><path d="M64.00781,48.00005h152a8,8,0,0,1,8,8V176" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path></svg> -->
+											<h3 class="h6 font-weight-normal mb-0 mr-1">lorem </h3>
+											<p class="mb-0 ml-auto grid-inner-count"></p>
+										</a>
+									</li>
+									<li class="col-12">
+										<a href="#oceania" class="grid-inner updated d-flex align-items-center py-3 px-4" data-filter=".cb-nav">
+											<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256" class="m-0 mr-3"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle><circle cx="128" cy="128" r="10"></circle><circle cx="80" cy="128" r="10"></circle><circle cx="176" cy="128" r="10"></circle></svg> -->
+											<h3 class="h6 font-weight-normal mb-0 mr-1">lorem</h3>
+											<p class="mb-0 ml-auto grid-inner-count"></p>
+										</a>
+
+									</li>
+									<li class="col-12">
+										<a href="#africa" class="grid-inner updated d-flex align-items-center py-3 px-4" data-filter=".cb-portfolio">
+											<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256" class="m-0 mr-3"><rect width="256" height="256" fill="none"></rect><rect x="32.00781" y="72.00005" width="192" height="144" rx="8" stroke-width="12" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><path d="M168,72V56a16,16,0,0,0-16-16H104A16,16,0,0,0,88,56V72" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path><path d="M224.00806,126.30915A191.11647,191.11647,0,0,1,128,152a191.11667,191.11667,0,0,1-95.99345-25.68239" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path><line x1="116" y1="120" x2="140" y2="120" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line></svg> -->
+											<h3 class="h6 font-weight-normal mb-0 mr-1">lorem</h3>
+											<p class="mb-0 ml-auto grid-inner-count"></p>
+										</a>
+									</li>
+									
+											</li>
+											
+											<li class="col-12">
+												<a href="#americas" class="grid-inner updated d-flex align-items-center py-3 px-4" data-filter=".cb-portfolio">
+													<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256" class="m-0 mr-3"><rect width="256" height="256" fill="none"></rect><rect x="32.00781" y="72.00005" width="192" height="144" rx="8" stroke-width="12" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><path d="M168,72V56a16,16,0,0,0-16-16H104A16,16,0,0,0,88,56V72" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path><path d="M224.00806,126.30915A191.11647,191.11647,0,0,1,128,152a191.11667,191.11667,0,0,1-95.99345-25.68239" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path><line x1="116" y1="120" x2="140" y2="120" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line></svg> -->
+													<h3 class="h6 font-weight-normal mb-0 mr-1">lorem</h3>
+													<p class="mb-0 ml-auto grid-inner-count"></p>
+												</a>
+											</li>
+													</li>
+
+							</nav>
+							<div class="text-center text-smaller mt-5 mb-4 px-4 op-07 d-none d-md-block">
+								Copyrights &copy; 2021 All Rights Reserved by passportly lorem.<br>
+								<div class="copyright-links mt-2"><a href="https://1.envato.market/c/1309643/480739/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fcanvas-the-multipurpose-html5-template%2F9228123%3Flicense%3Dregular%26open_purchase_for_item_id%3D9228123%26purchasable%3Dsource">Buy Canvas</a> / <a href="http://themes.semicolonweb.com/html/canvas/intro.html">Main Demos</a></div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Portfolio Items
+					============================================= -->
+					<div class="col-md p-5 p-md-6" style="background-color: #FFF;">
+					<h1 class="text-center" id="middle"> MIDDLE EAST</h1>
+						<div id="blocks" class="row portfolio grid-container gutter-40">
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-1.html"  class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/middleEast/jordan.png" height="360" data-src="flags/middleEast/jordan.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">jordan</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-2.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/middleEast/iran.png" width="640" height="360" data-src="flags/middleEast/iran.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Iran</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-3.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags//middleEast/lbenon.png" width="640" height="360" data-src="flags//middleEast/lbenon.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">lbenon</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-4.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags//middleEast/syria.png" width="640" height="360" data-src="flags//middleEast/syria.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Syria</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="turkey.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/middleEast/turkie.png" width="640" height="360" data-src="flags/middleEast/turkie.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Turkey</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+						</div>	
+						<br>
+						<br>
+						<h2 class="text-center" id="oceania"> OCEANIA</h2>
+						<br>
+						<br>
+						
+
+						<div id="blocks" class="row portfolio grid-container gutter-40">
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-1.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/CookIslands.png" height="360" data-src="flags/oceania/CookIslands.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Cook Islands</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-2.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/PalauIslands.png" width="640" height="360" data-src="flags/oceania/PalauIslands.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Palau Islands</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-3.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/Tuvalu.png" width="640" height="360" data-src="flags/oceania/Tuvalu.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Tuvalu</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-4.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/MarshallIslands.png" width="640" height="360" data-src="flags/oceania/MarshallIslands.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Marshall Islands</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/Vanuatu.png" width="640" height="360" data-src="flags/oceania/Vanuatu.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Vanuatu</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags//oceania/Samoa.png" width="640" height="360" data-src="flags/oceania/Samoa.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Samoa</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/Micronesia.png" width="640" height="360" data-src="flags/oceania/Micronesia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Micronesia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/oceania/Niue.png" width="640" height="360" data-src="flags/oceania/Niue.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Niue</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+						</div>		
+
+						<br>
+						<br>
+						<h2 class="text-center" id="africa"> AFRICA</h2>
+						<br>
+						<br>
+
+						<div id="blocks" class="row portfolio grid-container gutter-40">
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-1.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/algeria.png" height="360" data-src="flags/africa/algeria.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Algeria</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-2.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/benin.png" width="640" height="360" data-src="flags/africa/benin.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Benin</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-3.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/ComoroIslands.png" width="640" height="360" data-src="flags/africa/ComoroIslands.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Comoro Islands</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-4.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/congoRep.png" width="640" height="360" data-src="flags/africa/congoRep.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Congo Republic</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Ethiopia.png" width="640" height="360" data-src="flags/africa/Ethiopia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Ethiopia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Mauritius.png" width="640" height="360" data-src="flags/africa/Mauritius.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Mauritius</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/nigeria.png" width="640" height="360" data-src="flags/africa/nigeria.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Nigeria</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Rwanda.png" width="640" height="360" data-src="flags/africa/Rwanda.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Rwanda</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/SaoTome.png" width="640" height="360" data-src="flags/africa/SaoTome.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">SaoTome</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Senegal.png" width="640" height="360" data-src="flags/africa/Senegal.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Senegal</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Seychelles.png" width="640" height="360" data-src="flags/africa/Seychelles.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Seychelles</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/so.png" width="640" height="360" data-src="flags/africa/so.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Somalia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Tanzania.png" width="640" height="360" data-src="flags/africa/Tanzania.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Tanzania</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+						
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/TheGambia.png" width="640" height="360" data-src="flags/africa/TheGambia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">The Gambia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/togo.png" width="640" height="360" data-src="flags/africa/togo.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Togo</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/tunisia.png" width="640" height="360" data-src="flags/africa/tunisia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Tunisia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/uganda.png" width="640" height="360" data-src="flags/africa/uganda.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Uganda</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Gabon.png" width="640" height="360" data-src="flags/africa/Gabon.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Gabon</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/kenya.png" width="640" height="360" data-src="flags/africa/kenya.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">kenya</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Mauritania.png" width="640" height="360" data-src="flags/africa/Mauritania.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Mauritania</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/SaoTome.png" width="640" height="360" data-src="flags/africa/SaoTome.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">SaoTome</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/benin.png" width="640" height="360" data-src="flags/africa/benin.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Benin</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/CoteD'Ivoire.png" width="640" height="360" data-src="flags/africa/CoteD'Ivoire.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Cote D'Ivoire</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Madagascar.png" width="640" height="360" data-src="flags/africa/Madagascar.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Madagascar</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/Guinea-Bissau.png" width="640" height="360" data-src="flags/africa/Guinea-Bissau.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Guinea Bissau</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/africa/mali.png" width="640" height="360" data-src="flags/africa/Mali.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Mali</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+
+						</div>		
+
+				
+						<br>
+						<br>
+						<h2 class="text-center" id="americas">AMERICAS</h2>
+                        <br>
+						<br>
+
+						<div id="blocks" class="row portfolio grid-container gutter-40">
+						
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/belize.png" width="640" height="360" data-src="flags/americas/belize.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Belize</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+						
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/bolivia.png" width="640" height="360" data-src="flags/americas/bolivia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Bolivia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/brazil.png" width="640" height="360" data-src="flags/americas/brazil.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Brazil</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/colombia.png" width="640" height="360" data-src="flags/americas/colombia.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Colombia</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/ecuador.png" width="640" height="360" data-src="flags/americas/ecuador.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Ecuador</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							
+							<article class="portfolio-item text-center col-6 col-lg-4 cb-hero">
+								<a href="block-hero-5.html" target="_blank" class="grid-inner">
+									<div class="portfolio-image border border-dark">
+										<img class="lazy" src="flags/americas/Nicaragua.png" width="640" height="360" data-src="flags/americas/Nicaragua.png" alt="Block Image">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content">
+												<h3 class="h5 mb-0 text-black" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall">Nicaragua</h3>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-animate-out="fadeOut"></div>
+										</div>
+									</div>
+								</a>
+							</article>
+							
+			
+			
+                        </div>
+
+
+						<!-- #portfolio end -->
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-dark dark border-0 d-block d-md-none">
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-transparent">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-12 text-center">
+							Copyrights &copy; 2021 All Rights Reserved by SemiColonWeb.<br>
+							<div class="copyright-links"><a href="https://1.envato.market/c/1309643/480739/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fcanvas-the-multipurpose-html5-template%2F9228123%3Flicense%3Dregular%26open_purchase_for_item_id%3D9228123%26purchasable%3Dsource">Buy Canvas</a> / <a href="http://themes.semicolonweb.com/html/canvas/intro.html">Main Demos</a></div>
+						</div>
+					</div>
+
+				</div>
+			</div> <!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+		jQuery(document).ready( function($){
+			$(window).on( 'pluginIsotopeReady', function(){
+				$('.blocks-grid').find('li:not(.custom-filter-reset)').each( function(){
+					var element = $(this),
+						elementFilter = element.children().attr('data-filter'),
+						elementFilterContainer = element.parents('.blocks-grid').attr('data-container');
+
+					elementFilterCount = Number( jQuery(elementFilterContainer).find( '.portfolio-item' ).filter( elementFilter ).length );
+
+					element.find('.grid-inner-count').text(elementFilterCount);
+
+				});
+
+				$('.grid-container').on( 'layoutComplete', function() {
+					if( $('body').hasClass('device-xs') || $('body').hasClass('device-sm') ) {
+						$('#navbarNav').collapse('hide');
+					}
+				});
+
+
+				// quick search regex
+				var qsRegex;
+
+				// init Isotope
+				var $grid = $('.grid-container').isotope({
+				  filter: function() {
+					return qsRegex ? $(this).text().match( qsRegex ) : true;
+				  }
+				});
+
+				// use value of search field to filter
+				var $blockSearch = $('.block-search').keyup( debounce( function() {
+				  qsRegex = new RegExp( $blockSearch.val(), 'gi' );
+				  $grid.isotope();
+				}, 500 ) );
+
+				// debounce so filtering doesn't happen every millisecond
+				function debounce( fn, threshold ) {
+				  var timeout;
+				  threshold = threshold || 100;
+				  return function debounced() {
+					clearTimeout( timeout );
+					var args = arguments;
+					var _this = this;
+					function delayed() {
+					  fn.apply( _this, args );
+					}
+					timeout = setTimeout( delayed, threshold );
+				  };
+				}
+
+			});
+		});
+	</script>
+
+</body>
+</html>
