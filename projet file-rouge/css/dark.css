@@ -547,11 +547,12 @@ body #side-panel.dark {
 }
 
 .dark .portfolio-desc h3 a {
-	color: #F7F7F7;
+	color:#1c4587e0;
+	font-size: 14px;
 }
 
 .dark .portfolio-desc h3 a:hover {
-	color: rgba(255,255,255,0.75);
+	color: #1c4587e0;
 }
 
 .dark .portfolio-desc span,
