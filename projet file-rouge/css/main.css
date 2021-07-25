@@ -120,7 +120,7 @@ dl, dt, dd, ol, ul, li {
 }
 
 ::selection {
-	background: #1ABC9C;
+	background: #eaac78;
 	color: #FFF;
 	text-shadow: none;
 }
@@ -6759,11 +6759,11 @@ body:not(.device-touch) .grid-container {
 	border-radius: 2px;
 }
 
-.grid-filter li a:hover { color: #1ABC9C; }
+.grid-filter li a:hover { color: #1c4587e0; }
 
 .grid-filter li.activeFilter a {
 	color: #FFF;
-	background-color: #1ABC9C;
+	background-color: #1c4587e0;
 	margin: 0;
 	font-weight: bold;
 }
@@ -16969,4 +16969,8 @@ flex-direction: row-reverse;
   }
   .portfolio-item{
 	  width: 110px;
+  }
+  .logo2{
+	  width: 85px;
+	  margin-bottom: 10px;
   }
