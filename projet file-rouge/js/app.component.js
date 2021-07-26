@@ -20,15 +20,15 @@ class App extends React.Component {
           {/* Content Header (Page header) */}
           <section className="content-header">
             <div className="container-fluid">
-              <div className="row mb-2">
+              <div className="row">
               </div>
             </div>{/* /.container-fluid */}
           </section>
           {/* Main content */}
           <section className="content">
             {/* Default box */}
-            <div className="card">
-              <div className="card-body">
+            <div>
+              <div>
                 <CrudProduct />
               </div>
               {/* /.card-body */}

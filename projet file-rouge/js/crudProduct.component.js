@@ -101,7 +101,7 @@ class CrudProduct extends React.Component {
         return (
             
            
-           <div className="container">
+           <div>
                <header id="header">
         <div id="header-wrap">
           <div className="container">
@@ -145,7 +145,7 @@ class CrudProduct extends React.Component {
         <div className="header-wrap-clone" />
       </header>
 
-<form id="form-add" className="form-horizontal" onSubmit={this.addproduct.bind(this)}>
+<form id="form-add" className="form-horizontal mt-5" onSubmit={this.addproduct.bind(this)}>
         <div className="col-md-4 form-group">
           <label htmlFor="author">Name</label>
           <input type="text" name="author" id="ajouterName" defaultValue size={22} tabIndex={1} className="sm-form-control" />
@@ -175,7 +175,7 @@ class CrudProduct extends React.Component {
           <div className="container">
             <div className="row justify-content-between col-mb-30">
               <div className="col-12 col-lg-auto text-center text-lg-left order-last order-lg-first">
-                <img src="images/footer-logo.png" alt="Image" className="mb-4" /><br />
+                <img src="image/passlogo.png" alt="Image" className="mb-4 logo2" /><br />
                 Copyrights © 2020 All Rights Reserved by Canvas Inc.
               </div>
               <div className="col-12 col-lg-auto text-center text-lg-right">
