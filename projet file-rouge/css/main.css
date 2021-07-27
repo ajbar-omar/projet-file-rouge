@@ -6456,7 +6456,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 #page-title {
 	position: relative;
 	padding: 4rem 0;
-	background-color: #1c4587e0
+	background-color: #f8f9fa;
 }
 
 #page-title .container {
@@ -16974,3 +16974,4 @@ flex-direction: row-reverse;
 	  width: 85px;
 	  margin-bottom: 10px;
   }
+
