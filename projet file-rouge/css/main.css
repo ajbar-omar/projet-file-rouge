@@ -376,7 +376,7 @@ span.middot {
 .bg-color,
 .bg-color #header-wrap { background-color: #1ABC9C !important; }
 
-.color { color: #1ABC9C !important; }
+.color { color: #1c4587e0    !important; }
 
 .border-color { border-color: #1ABC9C !important; }
 
@@ -15496,7 +15496,7 @@ input.switch-flat-xlarge.switch-toggle-flat:checked + label::after { margin-left
 .btn-link,
 .page-link,
 .page-link:hover,
-.page-link:focus { color: #1ABC9C; }
+.page-link:focus { color: #1c4587e0; }
 
 .btn-link:hover,
 .btn-link:focus { color: #222; }
@@ -15534,8 +15534,8 @@ input.switch-flat-xlarge.switch-toggle-flat:checked + label::after { margin-left
 .page-link:hover,
 .page-link:focus {
 	color: #FFF !important;
-	background-color: #1ABC9C !important;
-	border-color: #1ABC9C !important;
+	background-color: #1c4587e0    !important;
+	border-color: #1c4587e0    !important;
 }
 
 .nav-pills > li.active > a,
